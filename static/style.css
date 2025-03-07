@@ -1,0 +1,183 @@
+/* General Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Main Container */
+.container {
+  width: 90%;
+  max-width: 700px;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Branding Colors */
+h1 {
+  color: #01ABF1; /* Primary Blue */
+}
+
+h2 {
+  color: #97E75B; /* Secondary Green */
+  margin-bottom: 15px;
+}
+
+/* Image Preview (Now Below "Face Analysis" Title) */
+.image-preview-container {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.rounded-image {
+  max-width: 180px;
+  height: 180px;
+  border-radius: 15px; /* Rounded square */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  display: none; /* Hide until image is uploaded */
+}
+
+/* Face Upload Section (Always Visible) */
+.face-upload {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+/* Drag & Drop Upload Box */
+.upload-box {
+  flex: 1;
+  padding: 15px;
+  border: 2px dashed #01ABF1; /* Blue Dashed Border */
+  background: #f8f9fa;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.upload-box:hover {
+  background: #e6f7ff;
+}
+
+/* Upload Button (Now Always Visible) */
+.face-upload button {
+  padding: 12px;
+  background-color: #97E75B; /* Green */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease-in-out, background-color 0.3s;
+}
+
+.face-upload button:hover {
+  background-color: #80C46A;
+  transform: scale(1.05);
+}
+
+/* Face Analysis Results (Now Below Upload Box) */
+#face-result {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Chat Section */
+.chat-box {
+  border: 1px solid #ddd;
+  height: 300px;
+  overflow-y: auto;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Chat Messages */
+.message {
+  padding: 12px;
+  border-radius: 10px;
+  max-width: 75%;
+  font-size: 15px;
+  word-wrap: break-word;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+/* User Message (Right-Aligned) */
+.user-message {
+  background-color: #01ABF1; /* Blue */
+  color: white;
+  align-self: flex-end;
+  border-radius: 10px 10px 0px 10px;
+  padding: 10px;
+  text-align: right;
+}
+
+/* AI Response (Left-Aligned) */
+.bot-message {
+  background-color: #97E75B; /* Green */
+  color: black;
+  align-self: flex-start;
+  border-radius: 10px 10px 10px 0px;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Chat Input */
+.chat-input {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.chat-input button {
+  padding: 12px 18px;
+  background-color: #01ABF1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease-in-out, background-color 0.3s;
+}
+
+.chat-input button:hover {
+  background-color: #0086CC;
+  transform: scale(1.05);
+}
+
+
+/* Smooth Transitions */
+.chat-box, .message, #face-result {
+  transition: all 0.3s ease-in-out;
+}

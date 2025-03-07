@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Profiling AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Image Preview at the Top -->
+        <div class="image-preview-container">
+            <img id="image-preview" src="" alt="Uploaded Image" class="rounded-image" />
+        </div>
+
+        <h1>Facial Profiling AI</h1>
+
+        <!-- Image Upload Section with Drag & Drop -->
+        <h2>Face Analysis</h2>
+        <div class="face-upload">
+            <label for="image-input" class="upload-box">
+                <input type="file" id="image-input" accept="image/*" hidden />
+                <p>Drag & Drop or Click to Upload Image</p>
+            </label>
+            <button id="upload-btn">Analyze</button>
+        </div>
+
+        <!-- Facial Analysis Results -->
+        <div id="face-result"></div>
+
+        <!-- Chat Section Below -->
+        <h2>Chat with AI</h2>
+        <div class="chat-box" id="chat-box"></div>
+
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message..." />
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
